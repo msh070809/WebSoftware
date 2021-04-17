@@ -43,8 +43,8 @@
                     </div>
                     <ul class = "nav">
                         <li><a href="./Main.html">HOME</a></li> <!--미구현:페이지 이동 기능-->
-                        <li><a href="./Login_Register">SIGN IN</a></li><!--미구현:페이지 이동 기능-->
-                        <li><a href="./Mypage">MYPAGE</a></li><!--미구현:페이지 이동 기능-->
+                        <li><a href="#">SIGN IN</a></li><!--미구현:페이지 이동 기능-->
+                        <li><a href="#">MYPAGE</a></li><!--미구현:페이지 이동 기능-->
                     </ul>
                 </div>
                 <div class=intro_text>
@@ -55,7 +55,7 @@
             </div>
             <div class ="order_bar">
               	<ul class = order>
-                     <li class = "cap">모자</li> 
+                     <li class = "cap">안경</li> 
                      <li class = "shirt">셔츠</li> 
                      <li class = "pants">바지</li>
                      <li class = "shoes">신발</li>
@@ -99,15 +99,15 @@
 						        	$('.item_boxs').remove();
 						        	$('.order>li').css("font-size","20px");
 						        	$('.cap').css("font-size","28px");
-						        	$('.order_name').html("<h3>모자</h3>");
+						        	$('.order_name').html("<h3>안경</h3>");
 				             		<%
 							    	for(int i = 0; i < caplist.size(); i++){
 								    %>
-										$('.main').append('<ul class ="item_boxs" id = '+ <%=i%> +'></ul>');
-										$('#'+<%=i%>).append('<li><img src ="image/dill.png"></li>');
-										$('#'+<%=i%>).append('<li class ="a">'+<%= caplist.get(i).getItemTitle() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="b">'+<%= caplist.get(i).getItemPrice() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="c">'+<%= caplist.get(i).getItemContent() %>+'</li>');
+										$('.main').append('<ul class ="item_boxs" id='+<%= i%>+'></ul>');
+										$('#'+<%=i%>+'.item_boxs').append('<li><img src ="image/dill.png"></li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="a">'+<%= caplist.get(i).getItemTitle() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="b">'+<%= caplist.get(i).getItemPrice() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="c">'+<%= caplist.get(i).getItemContent() %>+'</li>');
 										$('#'+<%=i%>+'.item_boxs').on('click',function(event){
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
@@ -127,10 +127,10 @@
 							    	for(int i = 0	; i < pantslist.size(); i++){
 								    %>
 										$('.main').append('<ul class ="item_boxs" id = '+ <%=i%> +'></ul>');
-										$('#'+<%=i%>).append('<li><img src ="image/dill.png"></li>');
-										$('#'+<%=i%>).append('<li class ="a">'+<%=pantslist.get(i).getItemTitle() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="b">'+<%=pantslist.get(i).getItemPrice() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="c">'+<%=pantslist.get(i).getItemContent() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li><img src ="image/dill.png"></li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="a">'+<%=pantslist.get(i).getItemTitle() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="b">'+<%=pantslist.get(i).getItemPrice() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="c">'+<%=pantslist.get(i).getItemContent() %>+'</li>');
 										$('#'+<%=i%>+'.item_boxs').on('click',function(event){
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
@@ -151,10 +151,10 @@
 							    	for(int i = 0; i < shoeslist.size(); i++){
 								    %>
 										$('.main').append('<ul class ="item_boxs" id = '+ <%=i%> +'></ul>');
-										$('#'+<%=i%>).append('<li><img src ="image/dill.png"></li>');
-										$('#'+<%=i%>).append('<li class ="a">'+<%= shoeslist.get(i).getItemTitle() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="b">'+<%= shoeslist.get(i).getItemPrice() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="c">'+<%= shoeslist.get(i).getItemContent() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li><img src ="image/dill.png"></li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="a">'+<%= shoeslist.get(i).getItemTitle() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="b">'+<%= shoeslist.get(i).getItemPrice() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="c">'+<%= shoeslist.get(i).getItemContent() %>+'</li>');
 										$('#'+<%=i%>+'.item_boxs').on('click',function(event){
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
@@ -175,10 +175,10 @@
 							    	for(int i = 0; i < gloveslist.size(); i++){
 								    %>
 										$('.main').append('<ul class ="item_boxs" id = '+ <%=i%> +'></ul>');
-										$('#'+<%=i%>).append('<li><img src ="image/dill.png"></li>');
-										$('#'+<%=i%>).append('<li class ="a">'+<%= gloveslist.get(i).getItemTitle() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="b">'+<%= gloveslist.get(i).getItemPrice() %>+'</li>');
-										$('#'+<%=i%>).append('<li class ="c">'+<%= gloveslist.get(i).getItemContent() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li><img src ="image/dill.png"></li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="a">'+<%= gloveslist.get(i).getItemTitle() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="b">'+<%= gloveslist.get(i).getItemPrice() %>+'</li>');
+										$('#'+<%=i%>+'.item_boxs').append('<li class ="c">'+<%= gloveslist.get(i).getItemContent() %>+'</li>');
 										$('#'+<%=i%>+'.item_boxs').on('click',function(event){
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
@@ -198,7 +198,7 @@
 
 							    	for(int i = 0; i < shirtlist.size(); i++){
 								    %>
-										$('.main').append('<ul class ="item_boxs" id = '+ <%=i%> +'></ul>');
+										$('.main').append('<ul class ="item_boxs" id = '+<%=i%> +'></ul>');
 										$('#'+<%=i%>).append('<li><img src ="image/dill.png"></li>');
 										$('#'+<%=i%>).append('<li class ="a">'+<%= shirtlist.get(i).getItemTitle() %>+'</li>');
 										$('#'+<%=i%>).append('<li class ="b">'+<%= shirtlist.get(i).getItemPrice() %>+'</li>');
@@ -220,12 +220,11 @@
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
 											var params = "Title="+a+"&Price="+b+"&Image="+"image/dill.png";
-											location.href="Detailpage.jsp?"+params;								
+											location.href="Detailpage.jsp?"+params;									
 										});
 								    <%
 								    	}
 								    %>    
-					</script>
-					
+					</script>		
     </body>
 </html>
