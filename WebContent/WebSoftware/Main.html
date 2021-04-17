@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+
+	body{
+		padding-top: 200px;
+	}
+	
+	header{
+		float: left;
+		font-size: 150%;
+		width: 100%;
+		height: 200px;
+		text-align: center;
+		background-image:url('wallpaper.jpg');
+		background-repeat : no-repeat;
+		background-size : cover ;
+		position: fixed;
+  		top: 0;
+  		z-index: 3;
+	}
+	
+	a{ 
+		text-decoration:none
+	}
+	
+	a:link{
+  		color : linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+	}
+	
+	a:visited{
+  		color : linear-gradient(-135deg, #E4A972, #9941D8) fixed;	
+  	}
+  	
+  	#subtitle{
+  		color : linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+  	}
+	
+	nav{
+	margin-top: 20px;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 30px;
+	background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+	height: 50px;
+  	line-height: 55px;
+  	width: 70%;
+  	border-radius: 10px;
+	}
+	
+	nav ul li {
+		display:inline;
+		font:bold 24px Dotum;
+		padding:0 10px;
+	}
+	
+	#mainimage{
+		position: relative;
+		height: 700px;
+		background: rgba(0, 0, 0, .5);
+    	background-size: cover;
+		margin-bottom: 50px;
+		z-index: 0;
+	}
+  	
+  	#img{
+	  	position: absolute;
+	  	height: 100%;
+	    width: 100%;
+	    opacity: 0.5;
+	    z-index: 1;
+  	}
+  	
+  	#imagetitle{
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);                                                                   
+	    font-size: 300%;
+	    color: white;
+	    text-align: center;
+	    z-index: 2;
+  	}
+  	
+	#box1, #box2, #box3, #box4, #box5{
+		float: left;
+		width: calc(100%/5 - 20px);
+		margin:0 10px;
+		height: 200px;
+		background: green;
+	}
+	
+	#box6, #box7, #box8, #box9, #box10, #btn1{
+		float: left;
+		width: calc(100%/5 - 20px);
+		margin:0 10px;
+		height: 60px;
+		background: #E5E0E0;
+		text-align: center;
+	}
+	
+	#blank{
+			color: rgba(0,0,0,0);
+	}
+	
+	footer{
+		text-align: center;
+	}
+	
+	#footer{
+		border-top: 1px solid #444;
+   		text-align: center;
+   		position: relative;
+   		background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+	}
+	
+	#footer_context>h3{
+    	margin: 10px;
+    	color: white;
+	}
+	#footer_context>ul>li{
+	    margin: 10px;
+	    list-style:none;
+	    color: white;
+	}
+	</style>
+	
+</head>
+
+<body bgcolor = "#fdfbfb">
+	<header>
+	 <a href="Main.html"><h1>CLOTHES CINEMA</h1></a>
+	<p id='subtitle'>There are a variety of clothes for you</p>	
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="Main.html">|&nbsp;HOME&nbsp;|</a></li>
+			<li><a href="로그인&회원가입.html">|&nbsp;SIGN IN&nbsp;|</a></li>
+			<li><a href="마이페이지.html">|&nbsp;MYPAGE&nbsp;|</a></li>
+			<li><a href="Shoppinlist.jsp">|&nbsp;SHOPPING LIST&nbsp;|</a></li>
+		</ul>
+	</nav>
+	
+	<article id = "mainimage">
+		<section id = "imagetitle">
+		<h2>어서오세요</h2>
+		<p>당신만의 멋진 옷을 찾아보세요</p>
+		</section>
+		
+		<section id = "img">
+		<img src = "cloth1.jpg", width="100%", height="700px">
+		</section>
+	</article>
+	
+	<article>
+	<section id = "box1">
+		<img src="pants.jpg" width ="100%" height="100%">
+	</section>
+	
+	<section id = "box2">
+		<img src="Cardigan.jpg" width ="100%" height="100%">
+	</section>
+	
+	<section id = "box3">
+		<img src="jacket.jpg" width ="100%" height="100%">
+	</section>
+	
+	<section id = "box4">
+		<img src="T-shirt.jpg" width ="100%" height="100%">
+	</section>
+	
+	<section id = "box5">
+		<img src="blouse.jpg" width ="100%" height="100%">
+	</section>
+	
+	<section id = "box6">
+		<a href="ListPage.html"><h1>팬츠 보러가기</h1></a>
+	</section>
+	
+	<section id = "box7">
+		<a href="ListPage.html"><h1>카디건 보러가기</h1></a>
+	</section>
+	
+	<section id = "box8">
+		<a href="ListPage.html"><h1>재킷 보러가기</h1></a>
+	</section>
+	
+	<section id = "box9">
+		<a href="ListPage.html"><h1>티셔츠 보러가기</h1></a>
+	</section>
+	
+	<section id = "box10">
+		<a href="ListPage.html"><h1>블라우스 보러가기</h1></a>
+	</section>
+	</article>
+	
+	<section id="blank">
+		<h1>이 공간은 공백입니다</h1>
+	</section>
+	
+</body>
+
+<footer>
+ 	<section id = "footer">
+ 		<section id = "footer_context">
+ 			<h3>쇼핑몰 회사(주)</h3>
+                        <ul>
+                            <li>사업자 등록번호 12345</li>
+                            <li>대표이사 홍길동 | 경기도 용인시 수지구 정평로 12345</li>
+                            <li>전화 1234-1234</li>
+                        </ul>
+ 		</section>
+ 	</section>
+</footer>
+
+</html>
