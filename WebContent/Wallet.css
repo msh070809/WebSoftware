@@ -1,0 +1,128 @@
+*{  
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin:0px;
+    padding: 0px;
+    color:black;
+}
+
+.contents1{
+    font-size: 20px;
+    font-weight : lighter; 
+}
+
+.contents1_bold{
+    font-size:30px;
+    font-weight: bold;
+}
+.intro_bg
+{   
+    background-image:url("myimage/main.jpg");
+    width: px;
+    height:518px;
+    background-position: center;
+}
+
+.header
+{   display:flex;
+    width:auto;
+    margin:auto;
+    height: 86px;
+}
+
+.nav{
+    font-size: x-large;
+    display: flex;
+    width: calc(3000px - 1400px);
+    justify-content: flex-end;
+    line-height: 60pt;
+}
+
+.nav > li{
+    margin-left: 84px;
+}
+
+.nav > li > a{
+    color:white;
+}
+
+.intro_text{
+    width : 60%;
+    margin : 231px auto 231px auto;
+    text-align: center;
+    font-size : 40px;
+
+}
+.intro_text > h1 {
+    color : white;
+}
+
+/* main text */
+
+.main_text0{
+    width:100%;
+    height : 601px;
+    background : #f1f2f3;
+    margin-top : 80px;
+    text-align: center;
+    
+}
+
+.icons{
+    display: flex;
+    width : auto;
+    height : 302px;
+    background : #f1f2f3;
+    margin : auto;
+    margin-top : 49px;
+}
+
+.icons > li {
+    flex :1;
+    background :white;
+    margin-top : 99px;
+    height : 302px;
+    text-align: center;
+}
+.icons > li > .icon_img{
+    margin-top:36px;
+}
+.icons > li:not(:last-child){
+    margin-right:20px;
+}
+
+button{
+	width:120px;
+	height: 40px;
+	color:#fff;
+	background: #004fff;
+	font-size: 16px;
+	border:none;
+	border-radius: 20px;
+	box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+	transition:0.3s;
+	position: absolute;
+	left:50%;
+	top:54%;
+	transform: translate(-50%,-50%);
+}
+button:focus {
+	outline:0;
+}
+button:hover{
+	background: rgba(0,79,255,0.9);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0,79,255,0.6);
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}

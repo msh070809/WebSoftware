@@ -16,7 +16,7 @@ public class ItemDAO {
 		try {
 			String dbURL = "jdbc:mysql://localhost:3306/websoftware?characterEncoding=UTF-8&severTimezone=UTC&useSSL=false";
 			String dbID="root";
-			String dbPassword = "moon5130$";
+			String dbPassword = "rpg153153";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
 		}catch(Exception e) {
