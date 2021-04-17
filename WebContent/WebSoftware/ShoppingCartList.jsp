@@ -26,7 +26,7 @@
 		text-align: center;
 		line-height: 250px;
 		/* 헤더 배경이미지 관련. 이미지가 반복되지 않고 꽉차게 나오도록 설정 */
-		background-image:url('wallpaper.jpg');
+		background-image:url('./mainimage/wallpaper.jpg');
 		background-repeat : no-repeat;
 		background-size : cover ;
 	}
@@ -51,7 +51,7 @@
 	margin: auto;
 	margin-bottom: 50px;
 	background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
-	width: 70%;
+	width: 1100px;
   	border-radius: 10px;
 	}
 	
@@ -127,7 +127,7 @@
 	</nav>
 	
 	<section>
-		<h2>Your Shopping List</h2>
+		<h2>Your Shopping cart</h2>
 	</section>
 	
 	<section>
@@ -137,6 +137,7 @@
             <td>가격</td>
             <td>수량</td>
             <td>삭제</td>
+            <td>구매</td>
             </tr>
 	</section>
             
@@ -145,7 +146,7 @@
 	   
       String dbURL = "jdbc:mysql://localhost:3306/websoftware?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
       String dbID = "root";
-      String dbPassword = "tmddnr009";
+      String dbPassword = "moon5130$";
 		
       Connection conn = null;
       ResultSet rs = null;
@@ -165,17 +166,15 @@
    
             while(rs.next())
             {
- 		%>
-      
- 		<tr>
-            <td><%= rs.getString("name") %></td>
-            <td><%= rs.getString("price") %></td>
-            <td><%= rs.getString("quantity") %></td>
-            <!--<td><a href="delete.jsp?send_name=<%=rs.getString("name")%>">삭제</a></td>-->
-            <td><input type="button" value="X" onClick="location.href='delete.jsp?send_name=<%=rs.getString("name")%>'"></input></td>
-            </tr>
-            
-        <%
+ 		%>  
+ 	 		<tr>
+	            <td><%= rs.getString("name") %></td>
+	            <td><%= rs.getString("price") %></td>
+	            <td><%= rs.getString("quantity") %></td>
+	            <td><input type="button" value="X" onClick="location.href='delete.jsp?send_name=<%=rs.getString("name")%>'"></input></td>
+	            <td><input type = "button" value= "구매" onClick="location.href='Addpurchaselist.jsp?ItemTitle='+<%=rs.getString("name")%>+'&ItemPrice='+<%=rs.getString("price")%>+'&ItemQuan='+<%=rs.getString("quantity")%>"></input></td>
+      	 	</tr>
+      <%
             }
       }catch(SQLException ex){
             out.println(ex.getMessage());

@@ -20,7 +20,7 @@ Class.forName("com.mysql.jdbc.Driver");
 try{
 	String dbURL = "jdbc:mysql://localhost:3306/websoftware?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
     String dbID = "root";
-    String dbPassword = "tmddnr009";
+    String dbPassword = "moon5130$";
     conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
     pstmt = conn.prepareStatement("delete from wkdqkrnsl where name=?");
     pstmt.setString(1, send_name);

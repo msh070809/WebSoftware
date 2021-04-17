@@ -43,9 +43,9 @@
                     </div>
                     <!-- 마우스 텍스트 위에 올라가면 색상변경 누르면 해당 내용 이동 -->
                     <ul class = "nav">
-                        <li><a href="#">HOME</a></li> 
-                        <li><a href="#">SIGN IN</a></li>
-                        <li><a href="#">MYPAGE</a></li>
+                        <li><a href="./Main.html">HOME</a></li> <!--미구현:페이지 이동 기능-->
+                        <li><a href="./Login_Register">SIGN IN</a></li><!--미구현:페이지 이동 기능-->
+                        <li><a href="./Mypage">MYPAGE</a></li><!--미구현:페이지 이동 기능-->
                     </ul>
                 </div>
                 <div class=intro_text>
@@ -175,18 +175,20 @@
     	$('.count').html(i);
     	$(".total_price").html(TotalPrice);
     });
-    $(".last_purchase").on('click',function(event){
-    	var quantity=$('.count').html();
-    	var ItemTitle=$(".item_name").find('h2').html();
-    	var TotalPrice=$(".total_price").html();
-    	location.href="Addpurchaselist.jsp?ItemTitle="+ItemTitle+"&ItemPrice="+TotalPrice+"&ItemQuan="+quantity;
-    });
+
     $(".shopping_cart").on('click',function(event){
     	var quantity=$('.count').html();
     	var ItemTitle=$(".item_name").find('h2').html();
-    	var TotalPrice=Price;
+    	var TotalPrice=Price*quantity;
     	location.href="insert.jsp?name="+ItemTitle+"&price="+TotalPrice+"&quantity="+quantity;
     });
-    </script>l
+    $(".last_purchase").on('click',function(event){
+    	var quantity=$('.count').html();
+    	var ItemTitle=$(".item_name").find('h2').html();
+    	var TotalPrice=Price*quantity;
+    	var params=ItemTitle+"&ItemPrice="+TotalPrice+"&ItemQuan="+quantity;
+    	location.href="AddPurchase.jsp?ItemTitle="+ItemTitle+"&ItemPrice="+TotalPrice+"&ItemQuan="+quantity;
+    });
+    </script>
     </body>
 </html>

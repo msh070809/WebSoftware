@@ -43,8 +43,8 @@
                     </div>
                     <ul class = "nav">
                         <li><a href="./Main.html">HOME</a></li> <!--미구현:페이지 이동 기능-->
-                        <li><a href="#">SIGN IN</a></li><!--미구현:페이지 이동 기능-->
-                        <li><a href="#">MYPAGE</a></li><!--미구현:페이지 이동 기능-->
+                        <li><a href="./Login_Register">SIGN IN</a></li><!--미구현:페이지 이동 기능-->
+                        <li><a href="./Mypage">MYPAGE</a></li><!--미구현:페이지 이동 기능-->
                     </ul>
                 </div>
                 <div class=intro_text>
@@ -220,7 +220,7 @@
 											var a = $(this).find('.a').html();
 											var b = $(this).find('.b').html();
 											var params = "Title="+a+"&Price="+b+"&Image="+"image/dill.png";
-											location.href="Detailpage.jsp?"+params;									
+											location.href="Detailpage.jsp?"+params;								
 										});
 								    <%
 								    	}
