@@ -1,27 +1,21 @@
 package itemlist;
 
 public class Items {
-	int itemId;
 	private String itemTitle;
-	private int itemPrice;
+	private String itemPrice;
 	private String itemContent;
 	private String itemImage;
-	public int getItemId() {
-		return itemId;
-	}
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
-	}
+
 	public String getItemTitle() {
 		return itemTitle;
 	}
 	public void setItemTitle(String itemTitle) {
 		this.itemTitle = itemTitle;
 	}
-	public int getItemPrice() {
+	public String getItemPrice() {
 		return itemPrice;
 	}
-	public void setItemPrice(int itemPrice) {
+	public void setItemPrice(String itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 	public String getItemContent() {
